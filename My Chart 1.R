@@ -1,38 +1,32 @@
-
 # add important code 
 library(ggplot2)
 library(dplyr)
 
 # load dataset
 
-trends_over_time <- read.csv("incarceration_trends_jail_jurisdiction.csv")
-
+new_data <- read.csv("incarceration_trends.csv")
 
 # Filtered data for difference races prison population over these years 
-years_filtered <- subset(trends_over_time, year %in% c("2000", "2005", "2010","2015"))
+years_filtered <- subset(new_data, year %in% c("2000", "2005", "2010","2015"))
 
 # Filtering for the races being compared!
-races_filtered <- select(years_filtered, c("year","black_jail_pop","latinx_jail_pop"))
+
+states_filtered <- subset(years_filtered, state %in% c("TX", "CA", "WA"))
+  
+all_filtered <- select(states_filtered, c("year","state","black_jail_pop","latinx_jail_pop", "native_jail_pop"))
 
 # work site
-ggplot(data = races_filtered, aes(
+ggplot(data = states_filtered, aes(
   x = year, 
-  y = black_jail_pop,
-  fill = year)) +
-  geom_bar(stat = "identity") + 
+  group = state)) +
+  geom_bar(aes(y = black_jail_pop, fill = "Black Jail Pop"), stat = "identity", position = "dodge") + 
+  geom_bar(aes(y = latinx_jail_pop, fill = "Latinx Jail Pop"), stat = "identity", position = "dodge") +
   labs(y = "Total Population ranges", 
        x = "Years",
-       fill = "Years Observed") +
-  ggtitle("The Difference between Black and Latinx Jail Population over the years!")
-
-
-# Bar Chart
-ggplot(data = races_filtered, aes(x = year)) +
-  geom_bar(aes(y = black_jail_pop, fill = "Black population"), stat = "identity") + 
-  geom_bar(aes(y = latinx_jail_pop, fill = "Latinx population"), stat = "identity") + 
-  labs(y = "Jail Population ranges", 
-       x = "Years",
-       fill = "Over the Years") +
-  ggtitle("The Difference between Black and Latinx Jail Population over the years!")
-
-
+       fill = "Population") +
+  ggtitle("Comparison of Black and Latinx Jail Population in Different States over the years!") +
+  scale_fill_manual(values = c("Black Jail Pop" = "blue",
+                               "Latinx Jail Pop" = "red"),
+                    name = "Population",
+                    breaks = c("Black Jail Pop", "Latinx Jail Pop")) +
+  facet_wrap(~state)

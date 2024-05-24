@@ -44,11 +44,11 @@ Why was the data collected?
 
 How many observations (rows) are in your data?  
 
-  - There is a total of 207,074 rows in my data.
+  - There is a total of 153,811 rows in my data.
 
 How many features (columns) are in the data?
 
-  - There is a total of 29 columns in my data. 
+  - There is a total of 121 columns in my data. 
 
 What, if any, ethical questions or questions of power do you need to consider when working with this data?  
 
