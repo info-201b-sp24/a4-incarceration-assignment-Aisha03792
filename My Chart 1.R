@@ -4,18 +4,16 @@ library(ggplot2)
 
 # load dataset
 
-trends_over_time <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
+trends_over_time <- read.csv("incarceration_trends_jail_jurisdiction.csv")
 
-# Filtered data for black male prison population in California
-hehe <- subset(trends_over_time, state %in% c("WA", "TX", "CA"))
-
-filtered_data <- hehe[, c("year", "state", "aapi_pop_15to64", "black_pop_15to64", "native_pop_15to64", "latinx_pop_15to64")]
-
+# Filtered data for black male prison population over these years 
+hehe <- subset(trends_over_time, year %in% c("1990", "1995", "2000","2005", 
+                                             "2010", "2015","2020"))
 
 # work site
-ggplot(data = filtered_data, aes(
+ggplot(data = hehe, aes(
   x = year, 
-  y =  black_pop_15to64,
+  y =  black_jail_pop_rate,
   color = state)) +
   geom_line(na.rm = FALSE) + 
   labs(y = "Black population", 
