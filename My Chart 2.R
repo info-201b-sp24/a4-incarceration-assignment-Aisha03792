@@ -1,25 +1,24 @@
 
-# add important code 
 library(ggplot2)
+library(dplyr)
 
-# load dataset
+# Assuming trends_over_time is already loaded
 
-trends_over_time <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv")
+# Filtered data for difference races prison population over these years 
+years_filtered <- subset(trends_over_time, year %in% c("2000", "2005", "2010", "2015"))
 
-# Filtered data for black male prison population in California
-hehe <- subset(trends_over_time, state %in% c("WA", "TX", "CA"))
+# Filtering for the races being compared!
+races_filtered <- select(years_filtered, c("year", "black_jail_pop", "latinx_jail_pop"))
 
-filtered_data <- hehe[, c("year", "state", "aapi_pop_15to64", "black_pop_15to64", "native_pop_15to64", "latinx_pop_15to64")]
-
-
-# work site
-ggplot(data = filtered_data, aes(
-  x = year, 
-  y =  black_pop_15to64,
-  color = state)) +
-  geom_line(na.rm = FALSE) + 
-  labs(y = "Black population", 
+# Create a scatter plot with connected points
+ggplot(data = races_filtered, aes(x = year, group = 1)) +
+  geom_line(aes(y = black_jail_pop, color = "Black Jail Population")) +
+  geom_point(aes(y = black_jail_pop, color = "Black Jail Population")) +
+  geom_line(aes(y = latinx_jail_pop, color = "Latinx Jail Population")) +
+  geom_point(aes(y = latinx_jail_pop, color = "Latinx Jail Population")) +
+  labs(y = "Total Population ranges", 
        x = "Years",
-       color = "Population Group") +
-  ggtitle("Black Population in jail across different states over time!")
+       color = "Population") +
+  ggtitle("Comparison of Black and Latinx Jail Population over the Years")
+
 
