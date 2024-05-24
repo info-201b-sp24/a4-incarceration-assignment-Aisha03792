@@ -19,18 +19,44 @@ These will likely be calculated using your DPLYR skills, answering questions suc
 - Where is my variable the highest / lowest?
 - How much has my variable change over the last N years?
 
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+Feel free to calculate and report values that you find relevant. Again, remember th  at the purpose is to think about how these measure of incarceration vary by race.
 
 ### The Dataset
 
-Who collected the data?  
+Who collected the data?
+
+  - Vera obtained their data from federally collected data through BJS and other various sources for example they used: 
+    - Annual Survey of Jails ( ASJ)
+    - Census of Jails (COJ)
+    - Mortality in Correctional Institutions (MCI)
+    - National Prisoner Statistics (NPS)
+    - National Corrections Reporting Program (NCRP)
+    - The U.S Department of Justice Bureau of Justice Statistics 
+    - National Center for Health Statistics (NCHS)
+
 How was the data collected or generated?  
+
+  - They were able to collect the data by going through the BJS Annual Survey of Jails(ASJ), Census of Jails (COJ), and Mortality of Correctional Institutions (MCI) data collections. 
+
 Why was the data collected?  
+
+  - They wanted to give the public access to current and historical data about the jail and prison population not just locally but also across states in the United States.
+
 How many observations (rows) are in your data?  
-How many features (columns) are in the data?  
+
+  - There is a total of 207,074 rows in my data.
+
+How many features (columns) are in the data?
+
+  - There is a total of 29 columns in my data. 
+
 What, if any, ethical questions or questions of power do you need to consider when working with this data?  
+
+  - 
+  
 What are possible limitations or problems with this data?   (at least 200 words)
 
+  - 
 
 ### Trends Over Time Chart
 
@@ -46,10 +72,11 @@ The first chart that you will create and include will show the trend over time o
 
 When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
 
-Here's an example of how to run an R script inside an RMarkdown file:
-
 ```{r, echo = FALSE, code = readLines("My Chart 1.R")}
 ```
+
+Thoughtfully creates a chart of trends over time, describes *why* it was designed that way, and what patterns emerge. Chart meets the requirements outlined above.
+
 
 ### Variable Comparison Chart
 
@@ -76,3 +103,6 @@ The last chart that you will create and include will show how a variable is dist
 
 ```{r, echo = FALSE, code = readLines("My Map.R")}
 ```
+
+
+Thoughtfully creates a chart comparing two variables, describes *why* it was designed that way, and what patterns emerge. Chart meets requirements outlined above.
