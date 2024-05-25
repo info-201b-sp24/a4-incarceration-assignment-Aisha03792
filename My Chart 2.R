@@ -23,4 +23,3 @@ ggplot(data = all_filtered_twice, aes(x = year, y = male_adult_jail_pop, color =
        x = "years", 
        color = "States") +
   ggtitle("Male adult jail population Vs Female Adult jail population")
-
