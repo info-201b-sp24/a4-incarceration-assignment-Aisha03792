@@ -7,7 +7,7 @@ output: html_document
 
 ### Introduction
 
-An introduction of the problem domain and a description of the variable(s) you are choosing to analyze (and why!)
+As long as African Americans have been here, they have seen high and unprecedented conflict within the United States criminal justice system if not 4 times than their white counterparts. Racial disparities are a problem that spans even through the daily lives of African Americans and other people of color but is highly seen within the Black community. For this assignment, we are going to investigate the population of Black people in Jail across three states, Washington, California, and Texas, from 2000 to 2015. To get a better understanding of which year was there a high incarceration rate as well as identify which state had the highest incarceration. Additionally, we are also going to which gender has the highest incarceration rate. 
 
 ### Summary Information
 
@@ -60,22 +60,11 @@ What are possible limitations or problems with this data?   (at least 200 words)
 
 ### Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+I have included this grouped bar chart to represent my trends over time data. In this graph, I am measuring which state had the highest incarceration levels of Black individuals between the years of 2000 to 2015. The bar chart was the best way to understand what is being compared and evaluated, even if I did a lined chart it would show what I am trying to compare but would make it hard to understand the graph. The importance of this graph is that it allows us to look at the state that had the highest incarceration rate each year and allows us to think of what problem is causing a repetition of such high incarceration rates in one state but the other this is helpful in figuring out what the other states can implement to help lower incarceration rates in their state.
 
-The first chart that you will create and include will show the trend over time of your variable/topic. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - This may mean showing the same measure for different locations or different racial groups. Think carefully about a meaningful comparison of locations (e.g., the top 10 counties in a state, top 10 states, etc.)
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
 
 ```{r, echo = FALSE, code = readLines("My Chart 1.R")}
 ```
-
-Thoughtfully creates a chart of trends over time, describes *why* it was designed that way, and what patterns emerge. Chart meets the requirements outlined above.
 
 
 ### Variable Comparison Chart
