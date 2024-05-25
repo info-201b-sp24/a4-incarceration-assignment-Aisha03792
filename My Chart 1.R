@@ -14,11 +14,11 @@ years_filtered <- subset(new_data, year %in% c("2000", "2005", "2010","2015"))
 states_filtered <- subset(years_filtered, state %in% c("TX", "CA", "WA"))
 
 all_filtered <- select(states_filtered, c("year","state","black_jail_pop","latinx_jail_pop", "native_jail_pop"))
-
+                     
 #bar chart over time 
 ggplot(all_filtered, aes(x = year, y = black_jail_pop, fill = state)) + 
   geom_bar(stat = "identity", position = "dodge") + 
   labs(x = "Year", 
-       y = "Population",
+       y = "Black Jail Population",
        title = "Black Jail Population Across Different States") + 
   theme_minimal()
