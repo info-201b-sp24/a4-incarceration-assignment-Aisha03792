@@ -1,8 +1,7 @@
-# add important code 
 library(ggplot2)
 library(dplyr)
 
-# load dataset
+# Load dataset
 new_data <- read.csv("incarceration_trends.csv")
 
 # Filtered data for different races prison population over these years 
@@ -12,14 +11,18 @@ years_filtered <- subset(new_data, year %in% c("2000", "2005", "2010", "2015"))
 states_filtered <- subset(years_filtered, state %in% c("TX", "CA", "WA"))
 
 # Select relevant columns
+all_filtered_three <- select(states_filtered, "year", "state", "female_prison_adm_rate", "male_prison_adm_rate")
 
-all_filtered_twice <- select(states_filtered, c("year", "state", "male_adult_jail_pop"))
+# Convert year to factor for correct ordering
+all_filtered_three$year <- factor(all_filtered_three$year)
 
-
-# Line chart
-ggplot(data = all_filtered_twice, aes(x = year, y = male_adult_jail_pop, color = state)) +
-  geom_line() +
-  labs(y = "Prison Population",
-       x = "years", 
-       color = "States") +
-  ggtitle("Male adult jail population Vs Female Adult jail population")
+# Create line chart
+ggplot(all_filtered_three, aes(x = year)) +
+  geom_line(aes(y = female_prison_adm_rate, color = "Female Jail Admissions"), na.rm = TRUE) +
+  geom_line(aes(y = male_prison_adm_rate, color = "Male Jail Admissions"), na.rm = TRUE) +
+  labs(title = "Trend of Female and Male Jail Admissions Over Time",
+       x = "Year",
+       y = "Admission Rate",
+       color = "Category") +
+  scale_color_manual(values = c("Female Jail Admissions" = "red", "Male Jail Admissions" = "blue")) +
+  theme_minimal()
