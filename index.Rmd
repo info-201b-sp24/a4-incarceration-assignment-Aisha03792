@@ -15,40 +15,7 @@ In this project, I mainly focused on the years  2000 to 2015 but in this section
 
 ### The Dataset
 
-Who collected the data?
-
-  - Vera obtained their data from federally collected data through BJS and other various sources for example they used: 
-    - Annual Survey of Jails ( ASJ)
-    - Census of Jails (COJ)
-    - Mortality in Correctional Institutions (MCI)
-    - National Prisoner Statistics (NPS)
-    - National Corrections Reporting Program (NCRP)
-    - The U.S Department of Justice Bureau of Justice Statistics 
-    - National Center for Health Statistics (NCHS)
-
-How was the data collected or generated?  
-
-  - They were able to collect the data by going through the BJS Annual Survey of Jails(ASJ), Census of Jails (COJ), and Mortality of Correctional Institutions (MCI) data collections. 
-
-Why was the data collected?  
-
-  - They wanted to give the public access to current and historical data about the jail and prison population not just locally but also across states in the United States.
-
-How many observations (rows) are in your data?  
-
-  - There is a total of 153,811 rows in my data.
-
-How many features (columns) are in the data?
-
-  - There is a total of 121 columns in my data. 
-
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
-
-  - 
-  
-What are possible limitations or problems with this data?   (at least 200 words)
-
-  - 
+This dataset makes an observation of incarceration rates between different states and groups of people within the United States. We are using  Vera and the data they have obtained, they have obtained their data from federally collected data through BJS and multiple other resources such as the **Annual Survey of Jails ( ASJ), Census of Jails (COJ), Mortality in Correctional Institutions (MCI), National Prisoner Statistics (NPS), National Corrections Reporting Program (NCRP), The U.S Department of Justice Bureau of Justice Statistics, National Center for Health Statistics (NCHS). They were able to collect the data by going through the BJS Annual Survey of Jails(ASJ), Census of Jails (COJ), and Mortality of Correctional Institutions (MCI) data collections**. They wanted to give the public access to current and historical data about the jail and prison population not just locally but also across states in the United States. In the data that I am observing there is a total of **153,811 rows** in my data. There are a total of **121 columns** in my data. Some ethical questions that I have when working with this data would be if some of the data they have analyzed from different organizations have the data of the number of people arrested was consent to be added as an individual and if they don't consent would that have an effect of their data, by un-stabilizing it. Some possible limitations with this data that might arise are incomplete data, there are some portions of this data where many columns are empty which might end up giving us errors when making our charts or trying to analyze one section to another. A problem that might arise is that the data might be an overall generalization as it doesn't go in-depth into what crime was committed, which might be a problem when someone is trying to compare the level of crimes being committed in those populations of groups. 
 
 ### Trends Over Time Chart
 
@@ -57,16 +24,10 @@ I have included this grouped bar chart to represent my trends over time data. In
 ```{r, echo = FALSE, code = readLines("My Chart 1.R")}
 ```
 
-
+  
 ### Variable Comparison Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show how two different (continuous) variables are related to one another. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- If you choose to add a color encoding (not required), you need a legend for your different color and a clear legend title
+In this line chart, I decided to compare male jail Admission compared to  Female jail admissions between 2000 and 2015. The primary reason was to examine which gender was more likely to be incarcerated during this period of time and explore the potential reasons behind any observed disparities. The graph illustrate that males consistently experienced higher rates of incarceration compared to females, throughout the analyzed time frame. This graphs along with how men are more subjugated with harshest and stricter criminal charges. Gender roles in crime sentences also play are roll, for example is a women and man commited a harsh crime alot of people would not belife that a women commit said crime. The overrall trend shows that women are in the year 2000, showed a significant incrimination rate compare to all the other years, this makes me question what happened in 2000 that raised the incarceration rates. 
 
 ```{r, echo = FALSE, code = readLines("My Chart 2.R")}
 ```
@@ -85,4 +46,3 @@ The last chart that you will create and include will show how a variable is dist
 ```
 
 
-Thoughtfully creates a chart comparing two variables, describes *why* it was designed that way, and what patterns emerge. Chart meets requirements outlined above.
