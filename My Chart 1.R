@@ -17,7 +17,7 @@ all_filtered <- select(states_filtered, c("year","state","black_jail_pop"))
                      
 #bar chart over time 
 ggplot(all_filtered, aes(x = year, y = black_jail_pop, fill = state)) + 
-  geom_bar(stat = "identity", position = "dodge") + 
+  geom_bar(stat = "identity", position = "dodge", na.rm = FALSE) + 
   labs(x = "Year", 
        y = "Black Jail Population",
        title = "Black Jail Population Across Different States and Years!") + 
