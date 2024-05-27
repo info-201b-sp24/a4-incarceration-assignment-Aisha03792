@@ -11,17 +11,7 @@ As long as African Americans have been here, they have seen high and unprecedent
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average value of my variable across all the counties (in the current year)?
-- Where is my variable the highest / lowest?
-- How much has my variable change over the last N years?
-- What is the maximum value of my variable across all the counties and which county does it belong to. 
-- What is the average value of my variable for each state accros all available years. 
-
-Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
+In this project, I mainly focused on the years  2000 to 2015 but in this section, I have strictly focused on the black jail population and the year 2005 as that is the year of the highest incarnation rates between the years that I have compared in my charts. I have identified that the average value of black_jail_pop across all counties was **94141.58**. The state with the highest black jail population was **New York with 7597** and the lowest was **0 in  Alaska**. Knowing that Texas has the highest black population I was surprised that more black people were incarcerated in New York compared to Texas in 2005. I also wanted to investigate which county had the maximum value of black_jail_pop across all states and I found that **Los Angeles, California** had the highest incarceration having incarcerated **13143.92** people.
 
 ### The Dataset
 

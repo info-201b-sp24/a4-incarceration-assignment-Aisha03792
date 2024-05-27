@@ -11,16 +11,18 @@ average_value <- new_data %>%
   summarize(black_jail_pop= mean(total_pop, na.rm = TRUE))
   
 
-# 2B. Where is black_jail_pop the highest / lowest?
+# 2B. Where(which state) is black_jail_pop the highest / lowest?
 
 highest_value <- new_data %>%
   filter(year == 2005) %>%
-  summarize(black_jail_pop = max(black_jail_pop, na.rm = TRUE))
+  slice(which.max(black_jail_pop)) %>%
+  select(state, black_jail_pop)
+  
   
 lowest_value <- new_data %>%
   filter(year == 2005) %>%
-  summarize(black_jail_pop = min(black_jail_pop, na.rm = TRUE))
-
+  slice(which.min(black_jail_pop)) %>%
+  select(state, black_jail_pop)
 
 # 3C. How much has black_jail_pop change over the last (5) years?
 
