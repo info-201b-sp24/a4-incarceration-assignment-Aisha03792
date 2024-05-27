@@ -1,5 +1,5 @@
 ---
-title: "Assignment 5:Data Visualization (Incarceration)"
+title: "Data Visualization (Incarceration)"
 author: "Aisha Abdulkarim"
 date: "2024-06-26"
 output: html_document
@@ -18,8 +18,10 @@ These will likely be calculated using your DPLYR skills, answering questions suc
 - What is the average value of my variable across all the counties (in the current year)?
 - Where is my variable the highest / lowest?
 - How much has my variable change over the last N years?
+- What is the maximum value of my variable across all the counties and which county does it belong to. 
+- What is the average value of my variable for each state accros all available years. 
 
-Feel free to calculate and report values that you find relevant. Again, remember th  at the purpose is to think about how these measure of incarceration vary by race.
+Feel free to calculate and report values that you find relevant. Again, remember that the purpose is to think about how these measure of incarceration vary by race.
 
 ### The Dataset
 
