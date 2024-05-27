@@ -26,6 +26,12 @@ lowest_value <- new_data %>%
 
 # 3C. How much has black_jail_pop change over the last (5) years?
 
+change_5_years <- new_data %>%
+  group_by(state) %>%
+  filter(year %in% c(2005)) %>%
+  arrange(state, year) %>%
+  summarize(change_in_black_jail_pop = diff(black_jail_pop))
+
 
 # 4D. What is the maximum value of black_jail_pop across all the states and which county does it belong to. 
 

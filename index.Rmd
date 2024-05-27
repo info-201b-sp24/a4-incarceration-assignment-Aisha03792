@@ -34,13 +34,8 @@ In this line chart, I decided to compare male jail Admission compared to  Female
 
 ### Map
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+In this map chart, I  am analysing the latinx jail population across washington state counties. The purpose of this is to identify which county had the highest incarceration rate of Lantix individual and the graph shows that the highest county is _____. This makes me think is this countiy has a high percentage of people who identify as latinx or that is where they have the largest jail location. 
 
-The last chart that you will create and include will show how a variable is distributed geographically. Again, think carefully about what such a comparison means and what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Your map needs a title
-- Your color scale needs a legend with a clear label
-- Use a map based coordinate system to set the aspect ratio of your map
 
 ```{r, echo = FALSE, code = readLines("My Map.R")}
 ```
